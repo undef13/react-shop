@@ -3,12 +3,12 @@ export default class ShopService {
     return [
       {
         id: 1,
-        title: "Киса",
+        title: "Book",
         author: "Valeriia Sushchenko"
       },
       {
         id: 2,
-        title: "Какого хуйца",
+        title: "Test",
         author: "Valeriia Sushchenko"
       }
     ];
