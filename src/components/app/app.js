@@ -1,12 +1,23 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Header from "../header";
 
-import withShopService from "../hoc/with-shop-service";
+import { HomePage, CartPage } from "../pages";
+import ShoppingCartTable from "../shopping-cart-table";
 
 import "./app.css";
 
-const App = (props) => {
-  console.log(props.ss.getProducts());
-  return <div>Shop</div>;
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/cart" component={CartPage}></Route>
+      </Switch>
+      <ShoppingCartTable />
+    </>
+  );
 };
 
-export default withShopService()(App);
+export default App;
